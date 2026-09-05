@@ -1,0 +1,6 @@
+{
+  "name": "Caribbean Media Platform",
+  "description": "A highly converting landing page for the Caribbean Media Platform (CMP), a localized social media platform for the Caribbean.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

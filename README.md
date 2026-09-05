@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Caribbean Media Platform (CMP)
 
-## Getting Started
+Welcome to the CMP repository. This is the main repository for the CMP project. Made by Zamar Wint.
 
-First, run the development server:
+## What is the Caribbean Media Platform?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Caribbean Media Platform (CMP) is a social media platform for content creators, users and businesses. It is only avaliable in the caribbean.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The purpose of CMP is to give individuals living in the Caribbean their own space to connect with each other.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+What makes the CMP special is that anybody can go viral. It's algorithm is designed to boost content creators and businesses where possible.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Built with
 
-## Learn More
+- Next.js
+- TypeScript
+- Shadcn UI
+- TailwindCSS
+- Appwrite Auth & DB
 
-To learn more about Next.js, take a look at the following resources:
+## Feedback
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To give feedback, please visit my [Portfolio website](https://#) and contact me from there.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Credits
 
-## Deploy on Vercel
+Built with ❤️ by Zamar Wint, software engineer.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026. All rights reserved.
