@@ -68,24 +68,24 @@ export const PhoneSimulator: React.FC = () => {
   return (
     <div className="w-full max-w-sm mx-auto relative">
       {/* Smartphone Hardware Frame */}
-      <div className="relative bg-white border-2 border-[#5E3122]/20 rounded-xl shadow-sm overflow-hidden text-[#5E3122] min-h-155 flex flex-col justify-between select-none">
+      <div className="relative bg-background border-2 border-border rounded-xl shadow-sm overflow-hidden text-secondary-foreground min-h-155 flex flex-col justify-between select-none">
         {/* Status Bar */}
-        <div className="pt-2 px-4 flex justify-between items-center text-xs font-semibold text-[#5E3122]/70 bg-white border-b border-[#5E3122]/10 z-30">
+        <div className="pt-2 px-4 flex justify-between items-center text-xs font-semibold text-secondary-foreground bg-background border-b border-border z-30">
           <span className="font-mono text-[11px]">9:41</span>
           {/* Speaker / Camera Notch */}
-          <div className="w-16 h-2.5 bg-[#5E3122]/10 rounded-full mx-auto flex items-center justify-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#1D4533]/40"></div>
+          <div className="w-16 h-2.5 bg-background rounded-full mx-auto flex items-center justify-center">
+            <div className="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
           </div>
           <div className="flex items-center space-x-1">
-            <span className="text-[#1D4533] font-bold text-[10px]">5G</span>
-            <div className="w-3.5 h-2 border border-[#5E3122]/40 rounded-xs p-0.5">
-              <div className="w-full h-full bg-[#1D4533]"></div>
+            <span className="text-primary font-bold text-[10px]">5G</span>
+            <div className="w-3.5 h-2 border border-secondary-foreground rounded-xs p-0.5">
+              <div className="w-full h-full bg-primary"></div>
             </div>
           </div>
         </div>
 
         {/* Island Category Tabs */}
-        <div className="px-2.5 py-2 z-20 flex space-x-1.5 overflow-x-auto no-scrollbar border-b border-[#5E3122]/10 bg-white">
+        <div className="px-2.5 py-2 z-20 flex space-x-1.5 overflow-x-auto no-scrollbar border-b border-border bg-background">
           {ISLANDS_LIST.slice(0, 6).map((is) => (
             <button
               key={is.code}
@@ -95,8 +95,8 @@ export const PhoneSimulator: React.FC = () => {
               }}
               className={`px-2.5 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap transition-all flex items-center space-x-1 cursor-pointer ${
                 selectedIsland === is.code
-                  ? "bg-[#1D4533] text-white"
-                  : "bg-[#F7EAE0]/60 text-[#5E3122] hover:bg-[#F7EAE0]"
+                  ? "bg-primary text-background"
+                  : "bg-muted/60 text-secondary-foreground hover:bg-secondary"
               }`}
             >
               <span>{is.flag}</span>
@@ -132,12 +132,12 @@ export const PhoneSimulator: React.FC = () => {
 
           {/* Floating Top Viral Badge */}
           <div className="absolute top-3 left-3 z-20 flex items-center space-x-2">
-            <span className="bg-[#1D4533] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider flex items-center shadow-xs">
-              <Zap size={11} className="mr-1 text-[#F9D2BA] fill-current" />
+            <span className="bg-primary text-background text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider flex items-center shadow-xs">
+              <Zap size={11} className="mr-1 text-secondary fill-current" />
               {currentItem.viralMultiplier}
             </span>
             {boostValue > 1 && (
-              <span className="bg-[#F9D2BA] text-[#1D4533] text-[10px] font-bold px-2 py-1 rounded-md shadow-xs">
+              <span className="bg-secondary text-primary text-[10px] font-bold px-2 py-1 rounded-md shadow-xs">
                 {boostValue}x Boost
               </span>
             )}
@@ -153,9 +153,9 @@ export const PhoneSimulator: React.FC = () => {
                 width={100}
                 height={100}
                 loading="eager"
-                className="w-8 h-8 rounded-full border border-white object-cover"
+                className="size-8 rounded-full border border-background object-cover"
               />
-              <span className="absolute -bottom-0.5 -right-0.5 bg-[#1D4533] text-white rounded-full p-0.5">
+              <span className="absolute -bottom-0.5 -right-0.5 bg-primary text-white rounded-full p-0.5">
                 <CheckCircle2 size={8} />
               </span>
             </div>
@@ -206,9 +206,9 @@ export const PhoneSimulator: React.FC = () => {
             <button
               onClick={handleBoost}
               title="Test Caribbean Viral Boost"
-              className="p-2 rounded-full bg-[#F9D2BA] text-[#1D4533] shadow-xs cursor-pointer"
+              className="p-2 rounded-full bg-secondary dark:bg-secondary-foreground text-primary shadow-xs cursor-pointer"
             >
-              <Flame size={16} className="fill-current text-[#1D4533]" />
+              <Flame size={16} className="fill-current text-primary" />
             </button>
           </div>
 
@@ -220,11 +220,11 @@ export const PhoneSimulator: React.FC = () => {
                 {currentItem.verified && (
                   <CheckCircle2
                     size={12}
-                    className="ml-1 text-[#F9D2BA] inline fill-current"
+                    className="ml-1 text-secondary dark:text-secondary-foreground inline fill-current"
                   />
                 )}
               </span>
-              <span className="text-[10px] text-[#F9D2BA] font-medium">
+              <span className="text-[10px] text-secondary dark:text-secondary-foreground font-medium">
                 {currentItem.flag} {currentItem.island}
               </span>
             </div>
@@ -234,20 +234,23 @@ export const PhoneSimulator: React.FC = () => {
             </p>
 
             {/* Audio Track Badge */}
-            <div className="flex items-center space-x-1.5 text-[10px] text-white/90 font-medium bg-black/40 px-2 py-0.5 rounded-md w-fit max-w-[85%] border border-white/10">
-              <Volume2 size={10} className="text-[#F9D2BA]" />
+            <div className="flex items-center space-x-1.5 text-[10px] text-white/90 font-medium bg-foregroubd/40 px-2 py-0.5 rounded-md w-fit max-w-[85%] border border-border">
+              <Volume2
+                size={10}
+                className="text-secondary dark:text-secondary-foreground"
+              />
               <span className="truncate">{currentItem.audioTrack}</span>
             </div>
           </div>
         </div>
 
         {/* Bottom Interactive Phone Navigation */}
-        <div className="bg-white px-3.5 py-2.5 border-t border-[#5E3122]/10 z-30">
+        <div className="bg-background px-3.5 py-2.5 border-t border-border z-30">
           <button
             onClick={nextFeedItem}
-            className="w-full py-2 bg-[#1D4533] hover:bg-[#1D4533]/90 text-white font-bold text-xs rounded-md flex items-center justify-center space-x-1.5 shadow-xs cursor-pointer"
+            className="w-full py-2 bg-primary hover:bg-primary/90 text-background font-bold text-xs rounded-md flex items-center justify-center space-x-1.5 shadow-xs cursor-pointer"
           >
-            <Sparkles size={13} className="text-[#F9D2BA]" />
+            <Sparkles size={13} className="text-secondary" />
             <span>Next Island Reel</span>
           </button>
         </div>

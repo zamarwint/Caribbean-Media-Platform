@@ -20,7 +20,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="bg-white text-[#5E3122] font-sans antialiased">
+    <div className="bg-background font-sans antialiased">
       {/* Main Content Sections */}
       <main>
         <Hero onOpenClaimModal={handleOpenClaimModal} />
